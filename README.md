@@ -13,7 +13,7 @@ Using [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
-    "rocktimsaikia/color-switch.nvim"
+    "rocktimsaikia/color-switch.nvim",
     config = function()
         require("color-switch")
     end
