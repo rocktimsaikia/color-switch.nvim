@@ -7,7 +7,7 @@ Easily convert and switch between different color formats.
 > More formats will be supported soon. As most engineers primarily deal \
 > with these two formats, they are enabled by default.
 
-# Installation
+## Installation
 
 Using [packger](https://github.com/wbthomason/packer.nvim)
 
@@ -20,7 +20,7 @@ use {
 }
 ```
 
-## Usage:
+## Usage
 
 The plugin only exposes a single command `:ColorSwitch` to keep the API simple and easy to use.
 
