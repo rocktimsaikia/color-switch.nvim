@@ -23,7 +23,7 @@ function convert_rgb_to_hex(rgb_color_str)
 	return string.format("#%02X%02X%02X", r, g, b)
 end
 
-function M.get_line_colors()
+function M.switch_colors()
 	local current_line = vim.api.nvim_get_current_line()
 	local hex_color = current_line:match("#%x%x%x%x%x%x")
 	local rgb_color = current_line:match("rgb%(%s*%d+%s*,%s*%d+%s*,%s*%d+%s*%)")
@@ -42,9 +42,8 @@ function M.get_line_colors()
 	end
 end
 
--- Create a command that calls the HelloWorld function
-vim.api.nvim_create_user_command("HelloWorld", function()
-	M.get_line_colors()
+vim.api.nvim_create_user_command("ColorSwitch", function()
+	M.switch_colors()
 end, { nargs = 0 })
 
 -- Return the module
