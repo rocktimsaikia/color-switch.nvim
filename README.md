@@ -4,12 +4,12 @@ Easily convert and switch between different color formats.
 
 > [!NOTE]
 > Currently, it supports switching between HEX and RGB color formats only. \
-> More formats will be supported soon. As most engineers primarily deal \
-> with these two formats, they are enabled by default.
+> More will be supported soon. As most engineers primarily deal \
+> with these two formats only, they are enabled by default.
 
 ## Installation
 
-Using [packger](https://github.com/wbthomason/packer.nvim)
+Using [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
