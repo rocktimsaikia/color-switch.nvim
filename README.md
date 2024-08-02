@@ -27,5 +27,5 @@ The plugin only exposes a single command `:ColorSwitch` to keep the API simple a
 Combine this command with your preferred key mapping in normal mode:
 
 ```lua
-vim.keymap.set("n", "<Leader>cs", "<Plug>ColorConvertCycle")
+vim.keymap.set("n", "<Leader>cs", "<Plug>ColorSwitch")
 ```
