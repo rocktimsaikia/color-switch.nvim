@@ -7,6 +7,8 @@ Easily convert and switch between different color formats.
 > More will be supported soon. As most engineers primarily deal \
 > with these two formats only, they are enabled by default.
 
+<img src="./demo.gif" width="450" height="250">
+
 ## Installation
 
 Using [packer](https://github.com/wbthomason/packer.nvim) here:
