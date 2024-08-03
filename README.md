@@ -9,7 +9,7 @@ Easily convert and switch between different color formats.
 
 ## Installation
 
-Using [packer](https://github.com/wbthomason/packer.nvim)
+Using [packer](https://github.com/wbthomason/packer.nvim) here:
 
 ```lua
 use {
@@ -22,9 +22,10 @@ use {
 
 ## Usage
 
-The plugin only exposes a single command `:ColorSwitch` to keep the API simple and easy to use.
+The plugin exposes a single command `:ColorSwitch` to keep the API simple and easy to use. \
+Combine it with your preferred key mapping in normal mode.
 
-Combine this command with your preferred key mapping in normal mode:
+Example:
 
 ```lua
 vim.keymap.set("n", "<Leader>cs", ":ColorSwitch<CR>")
