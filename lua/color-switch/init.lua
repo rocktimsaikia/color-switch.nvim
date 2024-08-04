@@ -4,27 +4,38 @@ local M = {}
 --  #FF5733
 
 local function escape_pattern(text)
+	-- Escape any special characters in the text used mainly
+	-- for escaping the special characters RGB color string.
 	return text:gsub("([^%w])", "%%%1")
 end
 
 local function convert_hex_to_rgb(hex)
+	-- Convert the hex string to RGB color string
 	hex = hex:gsub("#", "")
+
 	local r = tonumber(hex:sub(1, 2), 16)
 	local g = tonumber(hex:sub(3, 4), 16)
 	local b = tonumber(hex:sub(5, 6), 16)
+
 	return string.format("rgb(%d, %d, %d)", r, g, b)
 end
 
 local function convert_rgb_to_hex(rgb_color_str)
+	-- Convert the RGB color string to hex string
 	local r, g, b = rgb_color_str:match("rgb%((%d+),%s*(%d+),%s*(%d+)%)")
+
 	r = tonumber(r)
 	g = tonumber(g)
 	b = tonumber(b)
+	-- Format the hex string with %02X to get the
+	-- hex string with 2 digits and uppercase.
 	return string.format("#%02X%02X%02X", r, g, b)
 end
 
 function M.switch_colors()
 	local current_line = vim.api.nvim_get_current_line()
+
+	-- Match the hex color and RGB color in the current line
 	local hex_color = current_line:match("#%x%x%x%x%x%x")
 	local rgb_color = current_line:match("rgb%(%s*%d+%s*,%s*%d+%s*,%s*%d+%s*%)")
 
