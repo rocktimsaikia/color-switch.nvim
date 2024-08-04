@@ -3,11 +3,11 @@ local M = {}
 
 --  #FF5733
 
-function escape_pattern(text)
+local function escape_pattern(text)
 	return text:gsub("([^%w])", "%%%1")
 end
 
-function convert_hex_to_rgb(hex)
+local function convert_hex_to_rgb(hex)
 	hex = hex:gsub("#", "")
 	local r = tonumber(hex:sub(1, 2), 16)
 	local g = tonumber(hex:sub(3, 4), 16)
@@ -15,7 +15,7 @@ function convert_hex_to_rgb(hex)
 	return string.format("rgb(%d, %d, %d)", r, g, b)
 end
 
-function convert_rgb_to_hex(rgb_color_str)
+local function convert_rgb_to_hex(rgb_color_str)
 	local r, g, b = rgb_color_str:match("rgb%((%d+),%s*(%d+),%s*(%d+)%)")
 	r = tonumber(r)
 	g = tonumber(g)
