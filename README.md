@@ -30,5 +30,5 @@ Combine it with your preferred key mapping in normal mode.
 Example:
 
 ```lua
-vim.keymap.set("n", "<Leader>cs", ":ColorSwitch<CR>")
+vim.keymap.set("n", "<Leader>cs", "<cmd>ColorSwitch<CR>")
 ```
